@@ -1,2 +1,2 @@
 # mas-frontend
-Sistema para cadastro de atividades escolares e indicadores de desempenho estudantil.
+Criação de sistema para cadastro de atividades escolares e indicadores de desempenho estudantil.

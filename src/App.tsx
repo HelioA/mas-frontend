@@ -1,14 +1,13 @@
-import {Hello} from './components/Hello';
-import {Counter} from './components/Counter';
+import {BrowserRouter as Router} from 'react-router-dom';
+import Routes from './routes';
+import GlobalStyle from './styles/global';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Frontend My Activies Space</h1>
-      <p>Teste prático - Contador</p>
-      <Hello name="Helio"/>
-      <Counter />
-    </div>
+    <Router>
+      <Routes />
+      <GlobalStyle/>
+    </Router>
   );
 }
 
