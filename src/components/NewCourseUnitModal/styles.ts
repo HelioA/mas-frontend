@@ -43,7 +43,7 @@ export const Container = styled.div`
         &:hover {
             filter: brightness(0.8);
         }
-}
+    }
 `;
 
 export const Error = styled.span`
@@ -51,5 +51,3 @@ font-size: 0.9rem;
 font-weight: bold;
 color: coral;
 `;
-
-`
