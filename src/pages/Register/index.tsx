@@ -1,5 +1,5 @@
 import { FiArrowLeft, FiMail, FiLock, FiUser } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { Button } from '../../components/Button';
 import {useForm} from 'react-hook-form';
 import {Container, Content, FormContainer, InputContainer, Error, Background } from './styles';
@@ -14,8 +14,12 @@ interface FormData {
 
 export function Register() {
 
-    const {register, handleSubmit, formState: {errors}} = useForm<FormData>();
-    const onSubmit = handleSubmit(data => api.post('/user', data).then(response => alert(response.data)));
+    const { register, handleSubmit, formState: {errors} } = useForm<FormData>();
+
+    const history = useHistory()
+
+    const onSubmit = handleSubmit(data => api.post('/user', data).then(() => history.push('/')));
+
 
     return (
         <Container>
