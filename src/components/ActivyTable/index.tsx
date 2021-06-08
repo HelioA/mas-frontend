@@ -12,18 +12,18 @@ interface Activy {
     name: string;
     grade: number;
     activy_date: string;
-    course_unit: CourseUnit
+    course_unit: CourseUnit;
 }
 
 export function ActivyTable() {
 
-    const [activies, setActivies] = useState<Activy[]>([])
+    const [activies, setActivies] = useState<Activy[]>([]);
 
     useEffect(() => {
 
         api.get('/activy')
             .then(response => setActivies(response.data))
-    },[])
+    },[]);
 
     return (
         <Container>
@@ -52,5 +52,5 @@ export function ActivyTable() {
                 </tbody>
             </table>
         </Container>
-    )
+    );
 }

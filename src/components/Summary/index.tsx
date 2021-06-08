@@ -18,20 +18,20 @@ interface CourseUnit {
 
 export function Summary() {
 
-    const [activies, setActivies] = useState<Activy[]>([])
-    const [courseUnits, setcourseUnits] = useState<CourseUnit[]>([])
+    const [activies, setActivies] = useState<Activy[]>([]);
+    const [courseUnits, setcourseUnits] = useState<CourseUnit[]>([]);
 
     useEffect(() => {
 
         api.get('/activy')
             .then(response => setActivies(response.data))
-    },[])
+    },[]);
 
     useEffect(() => {
 
         api.get('/courseunit')
             .then(response => setcourseUnits(response.data))
-    },[])
+    },[]);
 
     return (
         <Container>
@@ -65,5 +65,5 @@ export function Summary() {
                 </strong>
             </div>
         </Container>
-    )
+    );
 }

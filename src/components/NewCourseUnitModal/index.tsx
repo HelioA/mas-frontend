@@ -1,8 +1,8 @@
 import React from 'react';
 import Modal from 'react-modal';
 import {FiX} from 'react-icons/fi';
-import { useForm } from 'react-hook-form'
-import { Container, Error } from './styles'
+import { useForm } from 'react-hook-form';
+import { Container, Error } from './styles';
 import api from '../../services/api';
 
 interface NewCourseUnitModalProps {
@@ -58,5 +58,5 @@ export function NewCourseUnitModal({isOpen, onRequestClose}:NewCourseUnitModalPr
             </Container>
         </Modal>
         
-    )
+    );
 }

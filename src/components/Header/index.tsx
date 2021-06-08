@@ -1,6 +1,6 @@
 import { FiLogOut } from 'react-icons/fi';
 import { Container, Content } from './styles';
-import { useAuth } from '../../hooks/Auth'
+import { useAuth } from '../../hooks/Auth';
 
 interface HeaderProps {
     onOpenNewActivyModal: () => void;
@@ -41,5 +41,5 @@ export function Header({onOpenNewActivyModal, onOpenNewCourseUnitModal}:HeaderPr
                 </div>
             </Content>
         </Container>      
-    )
+    );
 }

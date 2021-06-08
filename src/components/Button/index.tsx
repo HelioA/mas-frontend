@@ -9,5 +9,5 @@ export function Button({children, ...rest}:ButtonProps){
             {children}
 
         </Container>
-    )
+    );
 }

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
 import {FiX} from 'react-icons/fi';
-import { useForm } from 'react-hook-form'
-import { Container, Error } from './styles'
+import { useForm } from 'react-hook-form';
+import { Container, Error } from './styles';
 import api from '../../services/api';
 
 interface NewActivyModalProps {
@@ -14,7 +14,7 @@ interface NewActivyModalData {
     courseUnitId: string;
     name: string;
     grade: number;
-    activy_date: Date
+    activy_date: Date;
 }
 
 interface CourseUnit {
@@ -31,7 +31,7 @@ export function NewActivyModal({isOpen, onRequestClose}:NewActivyModalProps) {
     useEffect(() => {
         api.get('/courseunit')
             .then(response => setCourseUnits(response.data))
-    },[])
+    },[]);
 
     const { register, handleSubmit, formState: {errors} } = useForm<NewActivyModalData>();
     
@@ -90,5 +90,5 @@ export function NewActivyModal({isOpen, onRequestClose}:NewActivyModalProps) {
             </Container>
         </Modal>
         
-    )
+    );
 }

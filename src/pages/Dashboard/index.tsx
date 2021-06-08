@@ -7,7 +7,6 @@ import {NewActivyModal} from '../../components/NewActivyModal';
 import {NewCourseUnitModal} from '../../components/NewCourseUnitModal';
 
 
-
 export function Dashboard() {
 
     const [isNewActivyModalOpen, setIsNewActivyModalOpen ] = useState(false);
@@ -44,7 +43,7 @@ export function Dashboard() {
             />
             <NewCourseUnitModal 
                 isOpen={isNewCourseUnitModalOpen}
-                onRequestClose={handleCloseActivyModal}
+                onRequestClose={handleCloseCourseUnitModal}
             />
         </>
     );
